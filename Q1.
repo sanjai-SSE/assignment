@@ -8,7 +8,7 @@ int main()  {
      
     max = (a > b)?((a > c)?a:c):((b > c)?b:c);
    
-    /* Print Maximum Number */ 
+    
     printf("Maximum Number is = %d\n", max);  
    
     return 0;  
