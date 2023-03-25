@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+struct Student {
+    int number;
+    char grade;
+};
+
+int main() {
+    int n, As = 0, Bs = 0, Cs = 0, Ds = 0, Fs = 0;
+    cout << "Enter No. Students: ";
+    cin >> n;
+
+    Student students[n];
+
+    for (int i = 0; i < n; i++) {
+        cout << "Enter student " << i+1 << " Number, Grade: ";
+        cin >> students[i].number >> students[i].grade;
+        switch (students[i].grade) {
+            case 'A':
+                As++;
+                break;
+            case 'B':
+                Bs++;
+                break;
+            case 'C':
+                Cs++;
+                break;
+            case 'D':
+                Ds++;
+                break;
+            case 'F':
+                Fs++;
+                break;
+        }
+    }
+    for (int i = 0; i < n; i++) {
+        cout << "Student " << i+1 << " details:" << endl;
+        cout << "Number: " << students[i].number << endl;
+        cout << "Grade: " << students[i].grade << endl;
+        cout << "Total no. A: " << As << ", B: " << Bs << ", C: " << Cs << ", D: " << Ds << ", F: " << Fs << endl;
+    }
+
+    return 0;
+}
