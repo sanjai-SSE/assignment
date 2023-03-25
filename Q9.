@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int findHCF(int a, int b);
+int main() {
+    int num1, num2, hcf;
+    
+    printf("Enter two positive integers: ");
+    scanf("%d %d", &num1, &num2);
+    
+    hcf = findHCF(num1, num2);
+    
+    printf("HCF of %d and %d is %d", num1, num2, hcf);
+    
+    return 0;
+}
+
+int findHCF(int a, int b) {
+    int i, hcf;
+    
+    for(i=1; i<=a && i<=b; i++) {
+        if(a%i==0 && b%i==0) {
+            hcf = i;
+        }
+    }
+    
+    return hcf;
+}
+OUTPUT
+Enter two positive integers: 24 36
+HCF of 24 and 36 is 12
+
