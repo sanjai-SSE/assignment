@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+struct Student {
+    int rollNo;
+    char name[20];
+    float marks;
+};
+
+int main() {
+    struct Student s1 = { 101, "John", 85.5 };
+    struct Student *ptr = &s1; 
+
+    printf("Using dot operator:\n");
+    printf("Roll No: %d\n", s1.rollNo);
+    printf("Name: %s\n", s1.name);
+    printf("Marks: %.2f\n", s1.marks);
+
+    printf("\nUsing arrow operator:\n");
+    printf("Roll No: %d\n", ptr->rollNo);
+    printf("Name: %s\n", ptr->name);
+    printf("Marks: %.2f\n", ptr->marks);
+
+    return 0;
+}
+OUTPUT
+
+Roll No: 101
+Name: John
+Marks: 85.50
+
+
